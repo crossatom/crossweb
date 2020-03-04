@@ -13,19 +13,15 @@
 
         <cw-text family="Montserrat" size="40px" weight="900" color="#303030">Hello, World!</cw-text>
         <cw-text family="Montserrat" size="18px" weight="400" margin="10px 10px 40px 10px" color="#606060">Эта страница была создана с использованием CrossWeb версии 0.1.0</cw-text>
-        <cw-img src="logo.png" alt="IMAGE" width="200px" align="center"></cw-img>
-        <cw-button click="var win=window.open('https://github.com/crossatom/crossweb','_blank');win.focus()" align="center" margin="40px 10px 10px 10px">Читать документацию</cw-button>
+        <cw-img src="logo.png" alt="IMAGE" width="200px" align="center" hide-sm></cw-img>
+        <cw-button click="var win=window.open('https://github.com/crossatom/crossweb','_blank')" align="center" margin="40px 10px 10px 10px">Читать документацию</cw-button>
 
         <script src="lib/cw.js" type="module"></script>
         <script type="module">
             import CrossWeb from './lib/cw.js'
 
             var app = new CrossWeb({
-                device: 'desktop',
-                events: {
-                    beforeLoad: () => console.log('Initializing CrossWeb...'),
-                    afterLoad: () => console.log('CrossWeb successfuly initialized')
-                }
+                debug: true
             })
         </script>
     </body>
