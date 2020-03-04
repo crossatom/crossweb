@@ -31,7 +31,7 @@ button {
     color: white;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
-    transition: filter .25s ease-out, box-shadow .25s ease-out;
+    transition: filter .15s ease-out, box-shadow .15s ease-out;
 }
 button:hover {
     filter: brightness(90%);
@@ -45,4 +45,10 @@ button:active {
 p {
     margin: 10px;
     padding: 0;
+}
+
+@media only screen and (max-width: 500px) {
+    .hide-sm {
+        display: none;
+    }
 }
