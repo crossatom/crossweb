@@ -12,6 +12,7 @@ class CWArgs {
 
     change(arg) {
         if(!(arg instanceof Object)) throw new Error('CrossWeb: некорректные агрументы')
+        if(Object.keys(arg).length === 0) return
 
         var find = false
         for(var i = 0; i < Object.keys(this.nowArgs).length; i++) {
