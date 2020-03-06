@@ -9,20 +9,36 @@
         <title>Navbar</title>
     </head>
     <body>
-        <cw-app background="#f2f2f2" align-items="center" justify-content="center"></cw-app>
+        <cw-config for=app>
+            <cw-parameter for=text type=header>
+                family: Montserrat,
+                size: 46px
+            </cw-parameter>
+            <cw-parameter for=text type=paragraph>
+                family: Montserrat,
+                size: 18px
+            </cw-parameter>
+            <cw-parameter for=button type=mainbtn>
+                margin: 10px,
+                padding: 10px 20px,
+                background: #6600ff,
+                color: #f2f2f2,
+                family: Montserrat,
+                size: 14px,
+                transition: darken
+            </cw-parameter>
+        </cw-config>
 
-        <cw-text family="Montserrat" size="40px" weight="900" color="#303030">Hello, World!</cw-text>
-        <cw-text family="Montserrat" size="18px" weight="400" margin="10px 10px 40px 10px" color="#606060">Эта страница была создана с использованием CrossWeb версии 0.1.0</cw-text>
-        <cw-img src="logo.png" alt="IMAGE" width="200px" align="center" hide-sm></cw-img>
-        <cw-button click="var win=window.open('https://github.com/crossatom/crossweb','_blank')" align="center" margin="40px 10px 10px 10px">Читать документацию</cw-button>
+        <cw-app name=app align-items=center justify-content=center direction=vertical>
+            <cw-text type=header color=#000>Hello, World!</cw-text>
+            <cw-text type=paragraph color=#303030>Эта страница была собрана с использованием <b>CrossWeb</b> версии <i>0.1.1</i></cw-text>
+            <cw-button type=mainbtn click="go('https://github.com/crossatom/crossweb')">В репозиторий</cw-button>
+        </cw-app>
 
-        <script src="lib/cw.js" type="module"></script>
         <script type="module">
-            import CrossWeb from './lib/cw.js'
+            import CrossWeb from './js/cw.js'
 
-            var app = new CrossWeb({
-                debug: true
-            })
+            let app = new CrossWeb()
         </script>
     </body>
 </html>
